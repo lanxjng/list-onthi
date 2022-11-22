@@ -10,11 +10,33 @@ package bai5;
  */
 public class Bai5 {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    private int arr[];
+
+    public Bai5(int n) {
+        this.arr = new int[n];
     }
+    public void nhap(String txt){
+        String str[]=txt.split(","); // 1,2,3
+        for(int i=0;i<arr.length;i++){
+            arr[i]= Integer.parseInt(str[i]);
+        }
+    }
+    public String Tinh(){
+        int sum = 0;
+        int max = arr[0];
+        for(int a: arr){
+            sum+=a;
+            if(max<a){
+                max=a;
+            }
+        }
+        int avg = sum/arr.length;
+        
+        return "tbc: "+ String.valueOf(avg)+ " max: "+String.valueOf(max) ;
+    }
+    
+    
+    
+    
     
 }
